@@ -1,0 +1,15 @@
+{% extends 'secProject/products.html' %}
+
+{% block content %}
+{% for pro in Products %} 
+    <div class="product-box">
+        <img src="{{pro.image.url}}" alt="" class="product-img">
+        <h2 class="product-title"><a href="{% url 'display_product' %}">{{pro.description}}</a></h2>
+        <span class="price">{{ pro.price}}</span>
+        <i class='bx bx-cart add-cart'></i>
+    </div>
+
+    
+{% endfor %}   
+    
+{% endblock %}

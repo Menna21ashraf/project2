@@ -1,0 +1,16 @@
+{% extends 'secProject/Sproducts.html' %}
+
+{% block content %}
+{% for pro in Products %} 
+    <div class="single-pro-img">
+        <img src="{{pro.image.url}}" width="100%" id="mainimg">
+    </div>
+    <div class="single-pro-details">
+        <h6>Home/ Crochet</h6>
+        <h4>{{pro.description}}</h4>
+        <h2>{{pro.price}}</h2>
+        <h4> Product Details</h4>
+        <span>You can make crochet from materials such as metal, wood or plastic using a crochet hook. You can manufacture it commercially or produce it in artisan workshops. Crochet thread is made from mercerized cotton which has a denser pile and smaller diameter than regular yarn.</span>
+    </div>
+{% endfor %}      
+{% endblock %}
